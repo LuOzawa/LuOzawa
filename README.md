@@ -8,7 +8,7 @@ Guangzhou, China · 23 · `Go` `Python` `TypeScript`
 
 *I turn model capability into products that actually run in production — and can be measured.*
 
-[中文简介](#中文) · [Email](mailto:linlin700573@gmail.com)
+[Email](mailto:linlin700573@gmail.com)
 
 </div>
 
