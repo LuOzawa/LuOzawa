@@ -33,6 +33,27 @@ Guangzhou, China · 23
 
 ## 精选项目 · Featured
 
+### 🎓 本科毕业设计 · 钢材表面缺陷检测系统（私有）
+
+面向工业钢材表面缺陷检测的完整系统：YOLOv8 骨干 + **SE 通道注意力**，NEU-DET 六类缺陷，
+含训练 / 评估 / 推理 / PyQt5 界面全流程，已通过答辩。
+
+| 指标 | 基线 YOLOv8s | YOLOv8s + SE | 提升 |
+|---|---|---|---|
+| mAP@0.5 | 0.8107 | **0.8291** | **+1.8 pt** |
+| mAP@0.5:0.95 | 0.4971 | **0.5153** | **+1.8 pt** |
+| 参数量 | 11.17 M | 11.19 M | +32 KB（+0.2%） |
+
+**改进点**：在骨干 SPPF 之后插入 SE 模块（reduction=16，512→32→512），做通道重标定；
+新增参数仅 32 KB，几乎零成本换来 1.8 个点的提升。跨设备复现差异 0.3 pt。
+
+| 检测结果（裂纹） | 验证集批量预测 | PR 曲线 |
+|---|---|---|
+| ![](assets/steel-detection.jpg) | ![](assets/steel-val-batch.jpg) | ![](assets/steel-pr-curve.png) |
+
+> 🔒 该仓库（代码 + 训练权重 + 实验记录）为**私有毕业设计成果**，如需查阅或使用请联系
+> [邮箱](mailto:linlin700573@gmail.com)；未经许可请勿复制或用于课程 / 竞赛。
+
 ### 🥇 [kip-agent](https://github.com/LuOzawa/kip-agent)
 
 桌面 AI Agent，面向个人编码与企业工作流。仓库带完整工程实践：PR 流程、CODEOWNERS、CI、conventions 文档，技能（skills）体系与沙箱执行。
