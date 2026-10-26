@@ -22,7 +22,8 @@ Guangzhou, China · 23
 
 ## 说明 · Availability
 
-本页列出的仓库中，以下为公开可克隆：**kip-agent** · **pf-mdd-yolov8-defect-detection** · **shiji-releases**。
+本页列出的仓库中，以下为**公开可克隆**：`kip-agent` · `pf-mdd-yolov8-defect-detection` ·
+`study-material-recommender` · `family-finance-tracker` · `gz-student-rental-recsys` · `shiji-releases`。
 其余为私有仓库（毕业设计 / 在研产品），可提供**只读访问**，请邮件联系。
 
 **工程习惯**：每个仓库都有 GitHub Actions CI（后端测试 + 前端构建）、MIT License、`v1.0.0` 定稿 tag，
@@ -43,13 +44,13 @@ Guangzhou, China · 23
 **9 个单测锁住切块策略**（全幅覆盖无空隙、YOLO 框跨块映射、越界框丢弃、结果确定性），依赖精确锁定。
 `Python` · `PyTorch` · `YOLOv8` · `Computer Vision` · `Industrial Inspection`
 
-### 🥉 `study-material-recommender`
+### 🥉 [study-material-recommender](https://github.com/LuOzawa/study-material-recommender)
 
 基于 Hadoop 的考研参考资料推荐系统，融合 UserCF / ItemCF / SVD / TF-IDF 四路推荐，HDFS 归档大规模资料。
 **10 个单测覆盖 JWT 鉴权链路**（他人 token 越权拒绝、过期/篡改拒绝、弱密钥启动即失败）。
 `Spring Boot 3` · `Vue 3` · `Hadoop` · `HDFS` · `Recommendation`
 
-### 🏅 `family-finance-tracker`
+### 🏅 [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker)
 
 家庭理财记账系统，KMeans 消费聚类 + ARIMA 支出预测 + 四维财务健康评分，算法与业务结合最紧的一个项目。
 **44 个测试**（29 接口 + 15 纯函数），覆盖 ARIMA 三级降级与健康评分边界。
@@ -64,9 +65,9 @@ Guangzhou, China · 23
 | [kip-agent](https://github.com/LuOzawa/kip-agent) | 桌面 AI Agent | — | TypeScript | LLM 调用 | 技能体系 / 沙箱 / CI |
 | [pf-mdd-yolov8-defect-detection](https://github.com/LuOzawa/pf-mdd-yolov8-defect-detection) | 工业缺陷检测 | — | — | PyTorch · YOLOv8 | 切块 · 滑窗推理融合 |
 | `boss-zhipin-data-analysis` | 招聘数据洞察 | Django | ECharts | scikit-learn · jieba | 采集 · KMeans · 回归 |
-| `family-finance-tracker` | 家庭理财 | Flask | Vue 3 | ARIMA · KMeans | 时序预测 · 健康评分 |
-| `study-material-recommender` | 考研资料推荐 | Spring Boot 3 | Vue 3 | Hadoop · HDFS · SVD | 四路融合推荐 |
-| `gz-student-rental-recsys` | 租房推荐 | Spring Boot 3 | Vue 3 | 协同过滤 · 余弦相似度 | 推荐 + 地图 · Redis |
+| [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker) | 家庭理财 | Flask | Vue 3 | ARIMA · KMeans | 时序预测 · 健康评分 |
+| [study-material-recommender](https://github.com/LuOzawa/study-material-recommender) | 考研资料推荐 | Spring Boot 3 | Vue 3 | Hadoop · HDFS · SVD | 四路融合推荐 |
+| [gz-student-rental-recsys](https://github.com/LuOzawa/gz-student-rental-recsys) | 租房推荐 | Spring Boot 3 | Vue 3 | 协同过滤 · 余弦相似度 | 推荐 + 地图 · Redis |
 | `shop-platform` | 电商平台 | Spring Boot 2.7 | Vue 3 | — | 订单 / 支付 / 优惠券 |
 | `pharmacy-management` | 药店管理 | Spring Boot 3 | Vue 3 | — | 库存预警 · 会员积分 |
 | `traffic-repair-platform` | 交通设施报修 | Spring Boot 3 | Vue 3 | — | RBAC 工单流转 |
