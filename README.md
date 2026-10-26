@@ -25,6 +25,9 @@ Guangzhou, China · 23
 本页列出的仓库中，以下为公开可克隆：**kip-agent** · **pf-mdd-yolov8-defect-detection** · **shiji-releases**。
 其余为私有仓库（毕业设计 / 在研产品），可提供**只读访问**，请邮件联系。
 
+**工程习惯**：每个仓库都有 GitHub Actions CI（后端测试 + 前端构建）、MIT License、`v1.0.0` 定稿 tag，
+以及精确锁定的依赖版本；44 个自动化测试集中在鉴权越权、token 失效、图像切块覆盖、异常信息泄露这类真会出事的地方。
+
 ---
 
 ## 精选项目 · Featured
@@ -37,16 +40,19 @@ Guangzhou, China · 23
 ### 🥈 [pf-mdd-yolov8-defect-detection](https://github.com/LuOzawa/pf-mdd-yolov8-defect-detection)  · PUBLIC(https://github.com/LuOzawa/pf-mdd-yolov8-defect-detection)
 
 塑料薄膜多类表面缺陷检测。YOLOv8 + 宽幅图切块策略，12 类缺陷、4096×256 线扫图像，含数据流水线、滑窗推理融合与类别稳定性评估。
+**9 个单测锁住切块策略**（全幅覆盖无空隙、YOLO 框跨块映射、越界框丢弃、结果确定性），依赖精确锁定。
 `Python` · `PyTorch` · `YOLOv8` · `Computer Vision` · `Industrial Inspection`
 
 ### 🥉 `study-material-recommender`
 
 基于 Hadoop 的考研参考资料推荐系统，融合 UserCF / ItemCF / SVD / TF-IDF 四路推荐，HDFS 归档大规模资料。
+**10 个单测覆盖 JWT 鉴权链路**（他人 token 越权拒绝、过期/篡改拒绝、弱密钥启动即失败）。
 `Spring Boot 3` · `Vue 3` · `Hadoop` · `HDFS` · `Recommendation`
 
 ### 🏅 `family-finance-tracker`
 
 家庭理财记账系统，KMeans 消费聚类 + ARIMA 支出预测 + 四维财务健康评分，算法与业务结合最紧的一个项目。
+**44 个测试**（29 接口 + 15 纯函数），覆盖 ARIMA 三级降级与健康评分边界。
 `Flask` · `Vue 3` · `scikit-learn` · `statsmodels` · `Data Visualization`
 
 ---
