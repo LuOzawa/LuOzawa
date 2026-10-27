@@ -27,7 +27,7 @@ Guangzhou, China · 23
 其余为私有仓库（毕业设计 / 在研产品），可提供**只读访问**，请邮件联系。
 
 **工程习惯**：每个仓库都有 GitHub Actions CI（后端测试 + 前端构建）、MIT License、`v1.0.0` 定稿 tag，
-以及精确锁定的依赖版本；44 个自动化测试集中在鉴权越权、token 失效、图像切块覆盖、异常信息泄露这类真会出事的地方。
+以及精确锁定的依赖版本；94 个自动化测试集中在鉴权越权、token 失效、图像切块覆盖、异常信息泄露、工作流幂等与 RAG 引用兜底这类真会出事的地方。
 
 ---
 
@@ -77,6 +77,15 @@ Guangzhou, China · 23
 **44 个测试**（29 接口 + 15 纯函数），覆盖 ARIMA 三级降级与健康评分边界。
 `Flask` · `Vue 3` · `scikit-learn` · `statsmodels` · `Data Visualization`
 
+### 🔒 [feishu-hub](https://github.com/LuOzawa/feishu-hub) · 私有
+
+飞书「智枢」内部办公自动化平台：**YAML 声明式低代码**（9 张多维表格 + 8 条工作流 + 行列级权限 +
+Aily 智能伙伴），开放平台集成（token 缓存 / 频控退避 / 事件验签），**RAG 问答强制引用溯源、无依据转人工**。
+**50 个测试**（工作流幂等与重试、事件验签、RAG 兜底降级、权限行列级过滤），CI 跑 Python 3.10–3.12。
+`Python` · `Feishu/Lark` · `Low-code` · `Workflow Engine` · `RAG` · `AI Agent`
+
+> 🔒 该仓库为**私有在研项目**，如需查阅请邮件联系 [邮箱](mailto:linlin700573@gmail.com)。
+
 ---
 
 ## 技术栈矩阵 · Tech Stack Matrix
@@ -102,6 +111,7 @@ Guangzhou, China · 23
 | `ai-tutor-miniapp` | AI 助教小程序 | Spring Boot 3 | uni-app | DeepSeek LLM | 微信登录 · 错题本 |
 | `shiji-website` | 产品官网 | — | Vite · JS | — | Cloudflare Workers 部署 |
 | [shiji-releases](https://github.com/LuOzawa/shiji-releases) | 版本分发 | — | — | — | Mac 安装包分发 |
+| [feishu-hub](https://github.com/LuOzawa/feishu-hub) | 飞书内部办公自动化 | Python 3.10+ | — | BM25 + RRF 检索 | 低代码工作流 / 开放平台集成 / RAG 问答 |
 
 ---
 
@@ -115,6 +125,7 @@ Guangzhou, China · 23
 | **数据分析 / 预测** | boss-zhipin-data-analysis · family-finance-tracker |
 | **企业级全栈（Spring Boot + Vue 3）** | shop-platform · pharmacy-management · traffic-repair-platform · community-suggestion-box · elder-health-management · pet-center-management · liupanshui-tourism · jiufeng-park-management · physical-fitness-test-system · internship-management-system |
 | **产品工程** | shiji-website · shiji-releases |
+| **低代码 / AI 办公** | feishu-hub |
 
 ---
 
