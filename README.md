@@ -22,7 +22,7 @@ Guangzhou, China · 23
 
 ## 说明 · Availability
 
-本页列出的仓库中，以下为**公开可克隆**：`kip-agent` · `pf-mdd-yolov8-defect-detection` ·
+本页列出的仓库中，以下为**公开可克隆**：`langgraph-multi-agent` · `kip-agent` · `pf-mdd-yolov8-defect-detection` ·
 `study-material-recommender` · `family-finance-tracker` · `gz-student-rental-recsys` · `shiji-releases`。
 
 📖 **[graduation-projects](https://github.com/LuOzawa/graduation-projects) · 作品集总索引（公开）** ——
@@ -58,7 +58,15 @@ Guangzhou, China · 23
 > 🔒 该仓库（代码 + 训练权重 + 实验记录）为**私有毕业设计成果**，如需查阅或使用请联系
 > [邮箱](mailto:linlin700573@gmail.com)；未经许可请勿复制或用于课程 / 竞赛。
 
-### 🥇 [kip-agent](https://github.com/LuOzawa/kip-agent)
+### 🥇 [langgraph-multi-agent](https://github.com/LuOzawa/langgraph-multi-agent) · PUBLIC(https://github.com/LuOzawa/langgraph-multi-agent)
+
+可扩展的 LangGraph 多 Agent 协作框架：Supervisor 调度专家，专家可带工具；**专家级 + 工具级人工审批**（含 preview 与审计 JSONL）、
+SQLite 检查点断点续跑、专家失败隔离、上下文 token 裁剪、用量统计。
+**22 个离线测试**（四跳路由 / 非法路由降级 / 审批通过拒绝待批 / 工具级审批拦截放行 / 审计落盘 / 并行任务 / 上下文裁剪），
+CI 跑 ruff + mypy + pytest（Python 3.10–3.12）。
+`Python` · `LangGraph` · `Multi-Agent` · `Human-in-the-Loop` · `SQLite Checkpoint`
+
+### 🥈 [kip-agent](https://github.com/LuOzawa/kip-agent)
 
 桌面 AI Agent，面向个人编码与企业工作流。仓库带完整工程实践：PR 流程、CODEOWNERS、CI、conventions 文档，技能（skills）体系与沙箱执行。
 `TypeScript` · `AI Agent` · `LLM` · `Skills` · `Sandbox`
@@ -69,13 +77,13 @@ Guangzhou, China · 23
 **9 个单测锁住切块策略**（全幅覆盖无空隙、YOLO 框跨块映射、越界框丢弃、结果确定性），依赖精确锁定。
 `Python` · `PyTorch` · `YOLOv8` · `Computer Vision` · `Industrial Inspection`
 
-### 🥉 [study-material-recommender](https://github.com/LuOzawa/study-material-recommender)
+### 🏅 [study-material-recommender](https://github.com/LuOzawa/study-material-recommender)
 
 基于 Hadoop 的考研参考资料推荐系统，融合 UserCF / ItemCF / SVD / TF-IDF 四路推荐，HDFS 归档大规模资料。
 **10 个单测覆盖 JWT 鉴权链路**（他人 token 越权拒绝、过期/篡改拒绝、弱密钥启动即失败）。
 `Spring Boot 3` · `Vue 3` · `Hadoop` · `HDFS` · `Recommendation`
 
-### 🏅 [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker)
+### 🎖️ [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker)
 
 家庭理财记账系统，KMeans 消费聚类 + ARIMA 支出预测 + 四维财务健康评分，算法与业务结合最紧的一个项目。
 **44 个测试**（29 接口 + 15 纯函数），覆盖 ARIMA 三级降级与健康评分边界。
@@ -97,6 +105,7 @@ Aily 智能伙伴），开放平台集成（token 缓存 / 频控退避 / 事件
 | 项目 | 定位 | 后端 | 前端 | 数据 / 算法 | 关键能力 |
 |---|---|---|---|---|---|
 | [kip-agent](https://github.com/LuOzawa/kip-agent) | 桌面 AI Agent | — | TypeScript | LLM 调用 | 技能体系 / 沙箱 / CI |
+| [langgraph-multi-agent](https://github.com/LuOzawa/langgraph-multi-agent) | 多 Agent 协作框架 | Python | — | LangGraph · SQLite 检查点 | Supervisor 调度 / 审批门 / 失败隔离 / 上下文裁剪 |
 | [pf-mdd-yolov8-defect-detection](https://github.com/LuOzawa/pf-mdd-yolov8-defect-detection) | 工业缺陷检测 | — | — | PyTorch · YOLOv8 | 切块 · 滑窗推理融合 |
 | `boss-zhipin-data-analysis` | 招聘数据洞察 | Django | ECharts | scikit-learn · jieba | 采集 · KMeans · 回归 |
 | [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker) | 家庭理财 | Flask | Vue 3 | ARIMA · KMeans | 时序预测 · 健康评分 |
@@ -123,7 +132,7 @@ Aily 智能伙伴），开放平台集成（token 缓存 / 频控退避 / 事件
 
 | 方向 | 项目 |
 |---|---|
-| **AI / Agent** | kip-agent · ai-tutor-miniapp |
+| **AI / Agent** | langgraph-multi-agent · kip-agent · ai-tutor-miniapp |
 | **计算机视觉** | pf-mdd-yolov8-defect-detection |
 | **推荐系统** | study-material-recommender · gz-student-rental-recsys |
 | **数据分析 / 预测** | boss-zhipin-data-analysis · family-finance-tracker |
