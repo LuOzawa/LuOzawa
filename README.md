@@ -26,7 +26,7 @@ Guangzhou, China · 23
 `study-material-recommender` · `family-finance-tracker` · `gz-student-rental-recsys` · `shiji-releases`。
 
 📖 **[graduation-projects](https://github.com/LuOzawa/graduation-projects) · 作品集总索引（公开）** ——
-21 个项目的卡片墙与技术点速查：按方向挑项目、看核心难点与可讲点、看工程规范与测试明细。
+21 个项目的卡片墙：按方向挑项目、看每个项目做了什么、翻源码和文档。
 
 其余为私有仓库（毕业设计 / 在研产品），可提供**只读访问**，请邮件联系。
 
