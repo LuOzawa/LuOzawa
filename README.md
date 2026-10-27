@@ -24,6 +24,10 @@ Guangzhou, China · 23
 
 本页列出的仓库中，以下为**公开可克隆**：`kip-agent` · `pf-mdd-yolov8-defect-detection` ·
 `study-material-recommender` · `family-finance-tracker` · `gz-student-rental-recsys` · `shiji-releases`。
+
+📖 **[graduation-projects](https://github.com/LuOzawa/graduation-projects) · 作品集总索引（公开）** ——
+21 个项目的卡片墙与技术点速查：按方向挑项目、看核心难点与可讲点、看工程规范与测试明细。
+
 其余为私有仓库（毕业设计 / 在研产品），可提供**只读访问**，请邮件联系。
 
 **工程习惯**：每个仓库都有 GitHub Actions CI（后端测试 + 前端构建）、MIT License、`v1.0.0` 定稿 tag，
