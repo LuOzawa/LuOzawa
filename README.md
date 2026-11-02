@@ -31,7 +31,7 @@ Guangzhou, China · 23
 其余为私有仓库（毕业设计 / 在研产品），可提供**只读访问**，请邮件联系。
 
 **工程习惯**：每个仓库都有 GitHub Actions CI（后端测试 + 前端构建）、MIT License、`v1.0.0` 定稿 tag，
-以及精确锁定的依赖版本；94 个自动化测试集中在鉴权越权、token 失效、图像切块覆盖、异常信息泄露、工作流幂等与 RAG 引用兜底这类真会出事的地方。
+以及精确锁定的依赖版本；142 个自动化测试集中在鉴权越权、token 失效、图像切块覆盖、异常信息泄露、工作流幂等与 RAG 引用兜底这类真会出事的地方。
 
 ---
 
@@ -79,9 +79,9 @@ CI 跑 ruff + mypy + pytest（Python 3.10–3.12）。
 
 ### 🏅 [study-material-recommender](https://github.com/LuOzawa/study-material-recommender)
 
-基于 Hadoop 的考研参考资料推荐系统，融合 UserCF / ItemCF / SVD / TF-IDF 四路推荐，HDFS 归档大规模资料。
-**10 个单测覆盖 JWT 鉴权链路**（他人 token 越权拒绝、过期/篡改拒绝、弱密钥启动即失败）。
-`Spring Boot 3` · `Vue 3` · `Hadoop` · `HDFS` · `Recommendation`
+基于 Hadoop 的考研参考资料推荐系统，融合 UserCF / ItemCF / SVD / TF-IDF 四路推荐与 **LangGraph Agentic RAG**（pgvector 检索、vLLM 自托管、回答强制引用）。
+**58 个测试**（28 后端 + 30 AI 服务）覆盖 JWT 鉴权链路、内部令牌门禁、vLLM 异常降级、索引同步与 pgvector 余弦检索。
+`Spring Boot 3` · `Vue 3` · `FastAPI` · `LangGraph` · `vLLM` · `pgvector` · `Hadoop`
 
 ### 🎖️ [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker)
 
@@ -109,7 +109,7 @@ Aily 智能伙伴），开放平台集成（token 缓存 / 频控退避 / 事件
 | [pf-mdd-yolov8-defect-detection](https://github.com/LuOzawa/pf-mdd-yolov8-defect-detection) | 工业缺陷检测 | — | — | PyTorch · YOLOv8 | 切块 · 滑窗推理融合 |
 | `boss-zhipin-data-analysis` | 招聘数据洞察 | Django | ECharts | scikit-learn · jieba | 采集 · KMeans · 回归 |
 | [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker) | 家庭理财 | Flask | Vue 3 | ARIMA · KMeans | 时序预测 · 健康评分 |
-| [study-material-recommender](https://github.com/LuOzawa/study-material-recommender) | 考研资料推荐 | Spring Boot 3 | Vue 3 | Hadoop · HDFS · SVD | 四路融合推荐 |
+| [study-material-recommender](https://github.com/LuOzawa/study-material-recommender) | 考研资料推荐 | Spring Boot 3 + FastAPI | Vue 3 | Hadoop · HDFS · SVD · pgvector | 四路融合推荐 + Agentic RAG |
 | [gz-student-rental-recsys](https://github.com/LuOzawa/gz-student-rental-recsys) | 租房推荐 | Spring Boot 3 | Vue 3 | 协同过滤 · 余弦相似度 | 推荐 + 地图 · Redis |
 | `shop-platform` | 电商平台 | Spring Boot 2.7 | Vue 3 | — | 订单 / 支付 / 优惠券 |
 | `pharmacy-management` | 药店管理 | Spring Boot 3 | Vue 3 | — | 库存预警 · 会员积分 |
@@ -144,11 +144,12 @@ Aily 智能伙伴），开放平台集成（token 缓存 / 频控退避 / 事件
 
 ## 技术标签 · Stack Index
 
-**后端** `Spring Boot 2.7 / 3.x` `Spring Security 6` `Sa-Token` `MyBatis-Plus` `Flask` `Django` `Node.js`
+**后端** `Spring Boot 2.7 / 3.x` `Spring Security 6` `Sa-Token` `MyBatis-Plus` `Flask` `Django` `Node.js` `FastAPI`
 **前端** `Vue 3` `Element Plus` `Pinia` `Vite` `uni-app` `微信公众号小程序` `ECharts` `TypeScript`
-**数据 / 存储** `MySQL` `Redis` `HDFS / Hadoop` `SQLAlchemy` `Pandas`
+**数据 / 存储** `MySQL` `PostgreSQL / pgvector` `Redis` `HDFS / Hadoop` `SQLAlchemy` `Pandas`
 **算法** `YOLOv8` `PyTorch` `scikit-learn` `ARIMA` `KMeans` `UserCF / ItemCF` `SVD` `TF-IDF`
-**工程 / 交付** `Docker` `Cloudflare Workers` `GitHub Actions` `Playwright`
+**AI / Agent** `LangGraph` `vLLM` `RAG` `Agentic Retrieval` `Tool Calling`
+**工程 / 交付** `Docker` `uv` `Cloudflare Workers` `GitHub Actions` `Playwright`
 
 <div align="center">
 
