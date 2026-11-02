@@ -23,7 +23,7 @@ Guangzhou, China · 23
 ## 说明 · Availability
 
 本页列出的仓库中，以下为**公开可克隆**：`langgraph-multi-agent` · `kip-agent` · `pf-mdd-yolov8-defect-detection` ·
-`study-material-recommender` · `family-finance-tracker` · `gz-student-rental-recsys` · `shiji-releases`。
+`study-material-recommender` · `study-material-recommender-ai` · `family-finance-tracker` · `gz-student-rental-recsys` · `shiji-releases`。
 
 📖 **[graduation-projects](https://github.com/LuOzawa/graduation-projects) · 作品集总索引（公开）** ——
 21 个项目的卡片墙：按方向挑项目、看每个项目做了什么、翻源码和文档。
@@ -82,6 +82,8 @@ CI 跑 ruff + mypy + pytest（Python 3.10–3.12）。
 基于 Hadoop 的考研参考资料推荐系统，融合 UserCF / ItemCF / SVD / TF-IDF 四路推荐与 **LangGraph Agentic RAG**（pgvector 检索、vLLM 自托管、回答强制引用）。
 **58 个测试**（28 后端 + 30 AI 服务）覆盖 JWT 鉴权链路、内部令牌门禁、vLLM 异常降级、索引同步与 pgvector 余弦检索。
 `Spring Boot 3` · `Vue 3` · `FastAPI` · `LangGraph` · `vLLM` · `pgvector` · `Hadoop`
+
+> AI 升级版仓库：[study-material-recommender-ai](https://github.com/LuOzawa/study-material-recommender-ai)（独立可跑，含 ai-service 与 docker-compose）
 
 ### 🎖️ [family-finance-tracker](https://github.com/LuOzawa/family-finance-tracker)
 
